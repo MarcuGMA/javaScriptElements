@@ -27,8 +27,9 @@
 }
 
 .link {
+  display: block;
   position: relative;
-  padding: 0px 30px;
+  padding: 20px 30px;
   float: left;
   text-decoration: none;
   list-style: none;
@@ -36,17 +37,32 @@
 }
 
 .link a {
+  display: block;
   text-decoration: none;
   color: white;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
+.link a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .link .dropdownContainer {
   position: absolute;
+  top: calc(100%);
+  -webkit-box-shadow: 5px 5px 15px 11px rgba(0, 0, 0, 0.11);
+          box-shadow: 5px 5px 15px 11px rgba(0, 0, 0, 0.11);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .link .dropdownContainer .dropdown {
+  left: 0;
+  width: 100%;
   list-style: none;
   color: black;
   padding: 5px;
@@ -56,17 +72,16 @@
 }
 
 .link .dropdownContainer .dropdown:hover {
-  -webkit-transform: scale(1.09);
-          transform: scale(1.09);
+  background-color: #DEB887;
+  cursor: pointer;
 }
 
-.link {
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+.link:hover > .dropdownContainer {
+  opacity: 1;
+  pointer-events: all;
 }
 
-.link:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.link .active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
