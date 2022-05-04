@@ -75,5 +75,83 @@
     }
   }
   //MENU
+  .dropdownElementContainer {
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 
- 
+    .dropdownElement {
+      display: flex;
+      flex-direction: column;
+      height: 60%;
+      width: 70%;
+      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         
+        
+        .dropdownElementButton {
+          display: flex;
+          height: 20%;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+    
+          transition: all .6s ease;
+
+          &:hover {
+           transform: scale(1.05);
+           box-shadow: 5px 5px 15px 11px rgba(0,0,0,0.11);
+           color: blue;
+          }
+
+          header {
+            font-size: 25px;
+            padding-left: 20px;
+          }
+
+          .button {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border:none;
+            font-size: 25px;
+            padding-right: 20px;
+            background-color: transparent;
+            transition:all .4s ease;
+            
+            span{
+              transition:all .4s ease;
+
+              &:hover {
+                transform:  rotate(45deg);
+                transform-origin: center center;
+                color: red;
+              }
+            } 
+          }
+        }
+
+        .dropdownElementContent {
+          width: 100%;
+          height: 80%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          border: 1px solid black;
+          display: ;
+
+          p {
+            padding: 20px;
+          }
+        }
+
+        .active {
+          display: block;
+        }
+    }
+  }
